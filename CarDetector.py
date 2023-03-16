@@ -1,3 +1,12 @@
+"""
+--- CARDENSITYAI-------------------------------------------------------------------------------------------------------
+Fichero encargado de recoger el método para conteo y detección de vehículos.
+
+Última edición: 16/03/2023
+Autores: Blanca Rodríguez González (b.rodriguezg.2018@alumnos.urjc.es)
+         Francisco C. Vázquez Donaire (fc.vazquez.2018@alumnos.urjc.es)
+"""
+
 import cv2
 import numpy as np
 from patchify import patchify, unpatchify
