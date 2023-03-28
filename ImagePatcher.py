@@ -16,13 +16,6 @@ class ImagePatcher:
         self.__original_shape: tuple = original_shape
         self.__patches_shape: tuple = shape_patches
 
-    def __analyze_image(image: np.ndarray) -> list:
-        """
-        image: Subimagen en la que se va a realizar la detección 
-        return list: Una lista conteniendo la imagen con los bbox dibujados y un vector con todas las coodernadas de los bbox relativas a esa subimagen
-        """
-        pass
-
     def patch_image(self, image: np.ndarray) -> list:
         """
         image: Imagen que se va a dividir 
@@ -41,9 +34,3 @@ class ImagePatcher:
 
         return unpatchify(images, self.__original_shape)
 
-    def detect_cars(self, image: str) -> list:
-        """
-        image: Imagen en la que se va a realizar la detección 
-        list: Una lista conteniendo la imagen con los bbox dibujados y un vector con todas las coodernadas de los bbox en coordenadas absolutas
-        """
-        pass
