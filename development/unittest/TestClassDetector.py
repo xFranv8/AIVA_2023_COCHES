@@ -3,13 +3,17 @@
 Fichero intencionado para probar la clase desarrollada como parte del proyecto mediante test unitarios.
 
 
-Última edición: 16/03/2023
+Última edición: 30/03/2023
 Autores: Blanca Rodríguez González (b.rodriguezg.2018@alumnos.urjc.es)
          Francisco C. Vázquez Donaire (fc.vazquez.2018@alumnos.urjc.es)
 
 """
+import sys
+sys.path.append('../../development/')
 
-from CarDetector import CarDetector
+
+from BoundingBox import BoundingBox
+from Detector import Detector
 import cv2
 import numpy as np
 import unittest
@@ -17,18 +21,14 @@ import unittest
 
 class TestCarDetector(unittest.TestCase):
     def setUp(self):
-        self.car_detector = CarDetector((1024, 1024, 3), (512, 512, 3))
+        self.__detector = Detector((1024, 1024, 3), (512, 512, 3))
 
-    def test_patcher(self):
-        image: np.array = np.array(cv2.imread("test.png"))
+    def test_detect(self):
+        image: np.array = np.array(cv2.imread("../../images/austin1.tif"))
+        rectangles: list[BoundingBox] = self.__detector.detect(image)
 
-        # Prueba: Número de patches correcto
-        self.assertEqual(image.shape[0]/512, len(self.car_detector._patch_image(image)))
-
-        # Prueba: Dimensión de la imagen reconstruida = Dimensión imagen original
-        reconstructered_images = self.car_detector._unpatch_image(self.car_detector._patch_image(image))
-
-        self.assertEqual(True, (reconstructered_images == image).all())
+        # Comprobruebo que se detectan coches, por lo que la funciona funciona correctamente, aunque la detección no sea muy precisa
+        self.assertEqual(len(rectangles) > 10, True)
 
 
 if __name__ == "__main__":

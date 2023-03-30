@@ -8,11 +8,25 @@ import torch
 
 
 class Detector:
+    """
+    Clase que contiene métodos para detectar vehículos en una imagen. 
+    """
     def __init__(self, input_size: tuple, output_size: tuple) -> None:
+        """
+        Constructor de la clase Detector. Recibe como argumentos
+        - input_size: tupla que contiene las dimensiones de las subimagenes
+        - output_size: tupla que contiene las dimensiones de la imagen original
+        """
+        
         self.__model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
         self.__patcher: ImagePatcher = ImagePatcher(input_size, output_size)
 
     def detect(self, image: np.ndarray) -> list[BoundingBox]:
+        """
+        Método que detecta vehículos en una imagen. Recibe como argumento
+        - image: imagen original
+        """
+
         subimages: list = self.__patcher.patch_image(image)
 
         bboxs: list = []

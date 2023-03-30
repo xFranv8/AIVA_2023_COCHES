@@ -23,5 +23,5 @@ class CarDensityAI:
 
 
 if __name__ == "__main__":
-    cardensityai = CarDensityAI("../images/chicago1.tif", 250, "chicago1.csv")
+    cardensityai = CarDensityAI("../images/tyrol-w6.tif", 125, "tyrol-w6.csv")
     cardensityai.main()

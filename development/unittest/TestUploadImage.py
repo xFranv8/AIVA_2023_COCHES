@@ -1,3 +1,14 @@
+"""
+--- UNITARY TESTS FOR UPLOADING IMAGES VIA HTTP METHODS-----------------------------------------------------------------------------------------
+Fichero intencionado para comprobar que la subida de imágenes mediante HTTP funciona correctamente.
+
+
+Última edición: 30/03/2023
+Autores: Blanca Rodríguez González (b.rodriguezg.2018@alumnos.urjc.es)
+         Francisco C. Vázquez Donaire (fc.vazquez.2018@alumnos.urjc.es)
+
+"""
+
 import os
 import requests
 import unittest
