@@ -1,4 +1,10 @@
+import sys
+sys.path.append("../../")
+sys.path.append("..")
+
+
 import cv2
+from development.CarDensityAI import CarDensityAI
 from django.shortcuts import render
 import numpy as np
 
@@ -10,6 +16,9 @@ def upload(request):
         image = request.FILES['image']
         image_data = cv2.imdecode(np.frombuffer(image.read(), np.uint8), cv2.IMREAD_COLOR)
         cv2.imwrite('imagen.png', image_data)
+
+        cardensityai = CarDensityAI("imagen.png", 125, "results.csv")
+        cardensityai.main()
         
         return render(request, 'upload.html', {'success': True})
     return render(request, 'upload.html')
