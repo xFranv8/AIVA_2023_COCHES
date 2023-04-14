@@ -15,9 +15,9 @@ def upload(request):
         # Guardar la imagen en el servidor
         image = request.FILES['image']
         image_data = cv2.imdecode(np.frombuffer(image.read(), np.uint8), cv2.IMREAD_COLOR)
-        cv2.imwrite('imagen.png', image_data)
+        cv2.imwrite('results/imagen.png', image_data)
 
-        cardensityai = CarDensityAI("imagen.png", 125, "results.csv")
+        cardensityai = CarDensityAI("results/imagen.png", 125, "results/recuento_coches.csv")
         cardensityai.main()
         
         return render(request, 'upload.html', {'success': True})
