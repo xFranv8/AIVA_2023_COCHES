@@ -46,7 +46,21 @@ A fecha de la última edición del proyecto, el proyecto se podrá usar por terc
 
 ## Instrucciones de Uso
 
-A fecha de la última edición del proyecto, el sistema se ejecuta desde un interprete Python.
+Se ha creado una imagen de docker, llamada "aiva_2023_coches", que se ha subido al Docker Hub. Con el fin de utilizar esta imagen correctamente, se proporciona el archivo "docker-compose.yml" y la siguiente guía paso a paso:
+
+1. Asegúrate de tener Docker instalado en tu máquina. Puedes descargarlo desde la página oficial de Docker.
+
+2. Descarga el archivo docker-compose.yml del repositorio en tu máquina.
+
+3. Abre una terminal en la carpeta donde se encuentra el archivo docker-compose.yml.
+
+4. Ejecuta el siguiente comando para descargar la imagen de Docker del repositorio de Docker Hub:
+
+    * docker compose up
+
+5. Ahora, abre tu navegador web y ve a la dirección http://localhost:8000/ para acceder a tu aplicación web.
+
+6. Utiliza tu aplicación web según su funcionalidad, los resultados se guardarán en la carpeta "results/" en tu máquina local.
 
 
 

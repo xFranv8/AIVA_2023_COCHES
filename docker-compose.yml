@@ -2,7 +2,6 @@ version: '3'
 
 services:
   web:
-    # build: .
     image: xfranv8/aiva_2023_coches:latest
     volumes:
       - ./results:/code/development/WebApplication/results
