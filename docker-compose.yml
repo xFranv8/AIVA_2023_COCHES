@@ -4,7 +4,6 @@ services:
   web:
     # build: .
     image: xfranv8/aiva_2023_coches:latest
-    command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - ./results:/code/development/WebApplication/results
     ports:
