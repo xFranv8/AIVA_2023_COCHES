@@ -1,17 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Subir imagen</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
+
 <body>
-    {% if success %}
-        <h2>Imagen guardada correctamente</h2>
-    {% endif %}
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="file" name="image">
-        <button type="submit">Subir</button>
-    </form>
+    <div class="container">
+        <h1>Subir imagen</h1>
+        {% if success %}
+            <div class="success">
+                <p>Imagen guardada correctamente</p>
+            </div>
+        {% endif %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="file-upload">
+                <input type="file" name="image" id="file-input">
+                <label for="file-input">Selecciona un archivo</label>
+            </div>
+            <button type="submit" class="submit-button">Subir</button>
+        </form>
+    </div>
 </body>
 </html>
