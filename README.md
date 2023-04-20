@@ -18,10 +18,9 @@ El proyecto será desarrollado por:
 - [Blanca Rodríguez González](https://github.com/brodgon)
 - [Francisco C. Vázquez Donaire](https://github.com/xFranv8)
 
-Última Edición: 30/03/2023
+Última Edición: 20/04/2023
 
-> **Importante**: El proyecto no está finalizado. En esta versión, el repositorio incluye una versión de juguete de lo que será el sistema final. Este fichero README.md se irá actualizando conforme se vaya desarrollando y optimizando la tarea. El fichero recoge una estructura preliminar de lo que será su versión final. 
-
+> **Importante**: El proyecto CarDensityAI se presenta como proyecto piloto, admitiendo aun mejoras.
 ## Descripción del proyecto
 
 Con el fin de estimar la densidad de tráfico en diferentes núcleos urbanos, se plantea la implementación de un sistema de visión artificial capaz de realizar un recuento (y detección) automático de coches a partir de imágenes aéreas. Con este propósito, se implementará una red YOLO que analizará las imágenes y devolverá las coordenadas del "bounding box" en el que se encuentra cada coche. Esto se recogerá en un modulo diseñado para integrarse en las estaciones de trabajo del cliente, lo que permitirá realizar estudios de forma más rápida.
@@ -46,11 +45,11 @@ A fecha de la última edición del proyecto, el proyecto se podrá usar por terc
 
 ## Instrucciones de Uso
 
-Se ha creado una imagen de docker, llamada "aiva_2023_coches", que se ha subido al Docker Hub. Con el fin de utilizar esta imagen correctamente, se proporciona el archivo "docker-compose.yml" y la siguiente guía paso a paso:
+Se ha creado una imagen de docker, llamada "aiva_2023_coches", que se ha subido al (https://hub.docker.com/r/xfranv8/aiva_2023_coches)[Docker Hub]. Con el fin de utilizar esta imagen correctamente, se proporciona el archivo "docker-compose.yml" y la siguiente guía paso a paso:
 
 1. Asegúrate de tener Docker instalado en tu máquina. Puedes descargarlo desde la página oficial de Docker.
 
-2. Descarga el archivo docker-compose.yml del repositorio en tu máquina.
+2. Descarga el archivo docker-compose.yml de este repositorio en tu máquina.
 
 3. Abre una terminal en la carpeta donde se encuentra el archivo docker-compose.yml.
 
@@ -60,7 +59,7 @@ Se ha creado una imagen de docker, llamada "aiva_2023_coches", que se ha subido 
 
 5. Ahora, abre tu navegador web y ve a la dirección http://localhost:8000/ para acceder a tu aplicación web.
 
-6. Utiliza tu aplicación web según su funcionalidad, los resultados se guardarán en la carpeta "results/" en tu máquina local.
+6. Utiliza tu aplicación web según su funcionalidad, los resultados se guardarán en la carpeta "results/" en tu máquina local. Es importante tener en cuenta que esta carpeta es temporal, por lo que si se vuelve a ejecutar el programa, los resultados previos se perderán. Asegurate de tener todo en un lugar seguro antes de procesar una nueva imagen.
 
 
-
+En caso de duda o problema, no dude en contactar con los desarrolladores. Estamos a su disposición
