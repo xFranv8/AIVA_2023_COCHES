@@ -45,7 +45,7 @@ A fecha de la última edición del proyecto, el proyecto se podrá usar por terc
 
 ## Instrucciones de Uso
 
-Se ha creado una imagen de docker, llamada "aiva_2023_coches", que se ha subido al (https://hub.docker.com/r/xfranv8/aiva_2023_coches)[Docker Hub]. Con el fin de utilizar esta imagen correctamente, se proporciona el archivo "docker-compose.yml" y la siguiente guía paso a paso:
+Se ha creado una imagen de docker, llamada "aiva_2023_coches", que se ha subido al [Docker Hub](https://hub.docker.com/r/xfranv8/aiva_2023_coches). Con el fin de utilizar esta imagen correctamente, se proporciona el archivo "docker-compose.yml" y la siguiente guía paso a paso:
 
 1. Asegúrate de tener Docker instalado en tu máquina. Puedes descargarlo desde la página oficial de Docker.
 
